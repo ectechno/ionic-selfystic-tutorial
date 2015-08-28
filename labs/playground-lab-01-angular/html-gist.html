@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+
+<body ng-app="play">
+	<div class="list" ng-controller="HelloCtrl">
+		<label class="item item-input">
+			<input type="text" placeholder="Type Your Name" ng-model="firstname">
+		</label>
+		<h2>Hello, {{firstname}}</h2>
+	</div>
+</body>
+
+</html>
