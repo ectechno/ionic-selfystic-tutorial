@@ -2,7 +2,7 @@
 Playground is a good way to start Ionic.
 
 ## How to use
-To run the code snippets visit [Ionic Playground](play.ionic.io) and;
+To run the code snippets visit [Ionic Playground](http://play.ionic.io/) and;
 
 1. Switch to HTML tab and delete what's in it.
 2. Copy-paste the ```html-gist``` content to HTML tab.
@@ -15,7 +15,7 @@ You can eat, drink, and angularjs the code and see the response on the right-sid
 
 
 # Selfystic Labs
-Selfystic is a good way to jump start the ionic projects. You can get started by going thru the [Ionic Getting Started video tutorial](https://www.youtube.com/watch?v=C-UwOWB9Io4&feature=youtu.be) first.
+Selfystic is a good way to jump start the ionic projects. You can get started by going thru the [Getting Started](https://www.youtube.com/watch?v=C-UwOWB9Io4&feature=youtu.be) video tutorial first.
 
 ## How to use
 To run on an android device;
