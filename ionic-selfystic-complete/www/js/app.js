@@ -71,18 +71,24 @@
 
         $scope.capture = function () {
             var options = {
-                destinationType: Camera.DestinationType.FILE_URI,
+                quality: 50,
+                destinationType: Camera.DestinationType.DATA_URL,
                 sourceType: Camera.PictureSourceType.CAMERA,
-                cameraDirection: Camera.Direction.FRONT,
-                correctOrientation: true
+                allowEdit: true,
+                encodingType: Camera.EncodingType.JPEG,
+                targetWidth: 100,
+                targetHeight: 100,
+                popoverOptions: CameraPopoverOptions,
+                saveToPhotoAlbum: false,
+                correctOrientation:true
             };
 
-            $cordovaCamera.getPicture(options).then(function (imageURI) {
+            $cordovaCamera.getPicture(options).then(function (imageData) {
                 $scope.cardDestroyed(0);
 
                 imageIndex = Math.floor(Math.random() * cardTypes.length);
                 var newCard = cardTypes[imageIndex];
-                newCard.image = imageURI;
+                newCard.image = "data:image/jpeg;base64," + imageData;;
                 newCard.id = Math.random();
                 $scope.cards.push(angular.extend({}, newCard));
                 $scope.$digest();
