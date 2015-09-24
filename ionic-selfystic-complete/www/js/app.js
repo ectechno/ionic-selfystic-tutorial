@@ -25,7 +25,7 @@
       }
     })
 
-    .controller('Cards', function ($scope, $cordovaCamera, $ionicSwipeCardDelegate) {
+      .controller('Cards', function ($scope, $cordovaCamera, $ionicSwipeCardDelegate, $cordovaSocialSharing) {
       var cardTypes = [{
         title: 'Swipe down to clear the card',
         image: 'img/pic.png'
@@ -57,6 +57,10 @@
         var newCard = cardTypes[Math.floor(Math.random() * cardTypes.length)];
         newCard.id = Math.random();
         $scope.cards.push(angular.extend({}, newCard));
+      };
+
+      $scope.share = function(index){
+          $cordovaSocialSharing.share(null,null,cardTypes[index].image,null);
       };
 
       $scope.capture = function () {
