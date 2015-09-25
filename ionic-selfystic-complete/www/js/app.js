@@ -27,7 +27,6 @@
 
     .controller('Cards', function ($scope, $cordovaCamera, $ionicSwipeCardDelegate, $cordovaSocialSharing) {
 
-        var imageIndex;
 
         var cardTypes = [{
             title: 'Swipe down to clear the card',
@@ -56,6 +55,8 @@
             $scope.cards.splice(index, 1);
         };
 
+        var imageIndex;
+
         $scope.addCard = function () {
             imageIndex = Math.floor(Math.random() * cardTypes.length);
             var newCard = cardTypes[imageIndex];
@@ -66,7 +67,7 @@
         $scope.share = function () {
             console.log(imageIndex);
             console.log(cardTypes[imageIndex].image);
-            $cordovaSocialSharing.share(null,null,cardTypes[imageIndex].image,null);
+            $cordovaSocialSharing.share(null, null, cardTypes[imageIndex].image, null);
         };
 
         $scope.capture = function () {
@@ -80,7 +81,7 @@
                 targetHeight: 100,
                 popoverOptions: CameraPopoverOptions,
                 saveToPhotoAlbum: false,
-                correctOrientation:true
+                correctOrientation: true
             };
 
             $cordovaCamera.getPicture(options).then(function (imageData) {
